@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES2021",
+        "lib": ["dom", "ES2021"],
+        "declaration": true,
+        "outDir": "./dist",
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react"
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

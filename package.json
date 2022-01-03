@@ -1,0 +1,15 @@
+{
+  "name": "oikia",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "repository": "https://github.com/dothq/oikia",
+  "author": "Dot HQ <contact@dothq.co>",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "@dothq/id": "^1.0.1"
+  }
+}
