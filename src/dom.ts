@@ -1,3 +1,5 @@
+import { kebabToCamel } from "./utils/cc";
+
 export interface OikiaElement extends HTMLElement {
     /** @deprecated */
     innerHTML: string;
@@ -11,4 +13,8 @@ export const getDOMNodes = (selector: string) => {
 
 export const getDOMNode = (selector: string) => {
     return getDOMNodes(selector)[0] as OikiaElement;
+}
+
+export const style = (target: OikiaElement, key: any, value: any) => {
+    target.style[kebabToCamel(key)] = value;
 }
