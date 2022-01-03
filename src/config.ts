@@ -9,7 +9,7 @@ export const config = (options: OikiaOptions) => {
         console.warn(INNER_HTML_ALLOWED_WARNING())
     }
 
-    Object.defineProperty(window, "$__OIKIA__OPTIONS", {
+    Object.defineProperty(window, "__$OIKIA__OPTIONS", {
         get: () => {
             return Object.freeze(options);
         },

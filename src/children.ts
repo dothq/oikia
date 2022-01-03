@@ -5,6 +5,8 @@ export function appendChild<T extends Node>(target: OikiaElement | DocumentFragm
     // Empty elements like <br> can use the br syntax without calling the function
     if(typeof child == "function") child = (child as any)();
 
+    protectElement(child);
+
     if(child instanceof HTMLElement) {
         return target.appendChild(child);
     } else {

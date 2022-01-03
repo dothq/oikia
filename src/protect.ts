@@ -6,8 +6,9 @@ export const protectElement = (target: HTMLElement | Node | Element) => {
             typeof target == "object" && 
             "innerHTML" in target &&
             (
-                (window as any).$__OIKIA__OPTIONS &&
-                (window as any).$__OIKIA__OPTIONS.allowInnerHTML == false
+                !("allowInnerHTML" in (window as any).__$OIKIA__OPTIONS) ||
+                !(window as any).__$OIKIA__OPTIONS.allowInnerHTML ||
+                (window as any).__$OIKIA__OPTIONS.allowInnerHTML == false
             )
         ) {
             Object.defineProperty(target, "innerHTML", {
