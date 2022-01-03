@@ -26,7 +26,6 @@ export const attr = (target: OikiaElement, key: string, value: any) => {
 
     if(key == "style" && typeof value == "object") {
         for(const [key, val] of Object.entries(value)) {
-            console.log(key, val)
             target.style[kebabToCamel(key)] = val;
         }
         
