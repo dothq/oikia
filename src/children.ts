@@ -1,7 +1,10 @@
 import { OikiaElement, txt } from ".";
 import { protectElement } from "./protect";
 
-export function appendChild<T extends Node>(target: OikiaElement, child: T): T {
+export function appendChild<T extends Node>(target: OikiaElement | DocumentFragment, child: T): T {
+    // Empty elements like <br> can use the br syntax without calling the function
+    if(typeof child == "function") child = (child as any)();
+
     if(child instanceof HTMLElement) {
         return target.appendChild(child);
     } else {
@@ -10,7 +13,7 @@ export function appendChild<T extends Node>(target: OikiaElement, child: T): T {
     }
 }
 
-export const appendChildren = (target: OikiaElement, children: any) => {
+export const appendChildren = (target: OikiaElement | DocumentFragment, children: any) => {
     children.forEach(child => {
         appendChild(target, child);
     });

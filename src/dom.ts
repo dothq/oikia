@@ -3,6 +3,8 @@ export interface OikiaElement extends HTMLElement {
     innerHTML: string;
 }
 
+export interface OikiaFragment extends HTMLUnknownElement {}
+
 export const getDOMNodes = (selector: string) => {
     return document.querySelectorAll(selector);
 }

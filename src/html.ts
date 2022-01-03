@@ -46,3 +46,6 @@ export function html<K extends keyof TagNameMap>(
 
     return element;
 }
+
+export const h = html;
+export const el = html;
