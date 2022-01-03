@@ -1,6 +1,6 @@
 import { INVALID_HTML_QUERY_CHAR, INVALID_HTML_QUERY_UNKNOWN } from "../errors";
 
-export const isValidQuery = (query: string) => {
+export const isValidQuery = (query: any) => {
     let tmp: HTMLElement;
 
     try {
