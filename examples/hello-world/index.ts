@@ -1,4 +1,4 @@
-import { br, button, createRef, h1, render, span, _ } from "../../src";
+import { br, button, createRef, h1, render, span, _ } from "oikia";
 import anime from "animejs";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
             duration: 200,
             easing: "easeOutQuad",
             color: hex(),
-            update: (a) => hexRef.current.textContent = a.animations[0].currentValue
+            update: (a) => hexRef.current.textContent = `Colour: ${a.animations[0].currentValue}`
         })
     }
 

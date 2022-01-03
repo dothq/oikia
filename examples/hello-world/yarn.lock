@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@dothq/id@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@dothq/id/-/id-1.0.1.tgz#353e4ccefe7e7a3f3528c0888a456b944671c9a7"
+  integrity sha512-UFBWgzCNUsyVE3cTQUKs1glWLATlScUrDkLNmAxU7Fsmx056u4wIM75sPmRc5sxiFkd1UflgVurDJv70soS7qQ==
+
 "@types/animejs@^3.1.4":
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/@types/animejs/-/animejs-3.1.4.tgz#92f90d1c800b9041b64a7da9da0e68e690146b0e"
@@ -148,6 +153,13 @@ nanoid@^3.1.30:
   version "3.1.30"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.30.tgz#63f93cc548d2a113dc5dfbc63bfa09e2b9b64362"
   integrity sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==
+
+oikia@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/oikia/-/oikia-0.0.4.tgz#99d0dd4a151c8421585307bc7b0ad13529665912"
+  integrity sha512-wjj7Jn7D28nnzsMrvjmR0tB1jYCFoZcEkGpkA8fyvJ+NpDQiPv2VO8S7mP4opE9TeQbdlwmtWt8ur+o4txB2yQ==
+  dependencies:
+    "@dothq/id" "^1.0.1"
 
 path-parse@^1.0.6:
   version "1.0.7"
