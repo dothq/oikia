@@ -6,9 +6,9 @@ export interface OikiaElement extends HTMLElement {
 export interface OikiaFragment extends HTMLUnknownElement {}
 
 export const getDOMNodes = (selector: string) => {
-    return document.querySelectorAll(selector);
+    return Array.from(document.querySelectorAll(selector)) as OikiaElement[];
 }
 
 export const getDOMNode = (selector: string) => {
-    return getDOMNodes(selector)[0];
+    return getDOMNodes(selector)[0] as OikiaElement;
 }
