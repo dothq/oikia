@@ -15,6 +15,6 @@ export const getDOMNode = (selector: string) => {
     return getDOMNodes(selector)[0] as OikiaElement;
 }
 
-export const style = (target: OikiaElement, key: any, value: any) => {
+export const css = (target: OikiaElement, key: any, value: any) => {
     target.style[kebabToCamel(key)] = value;
 }
