@@ -16,5 +16,22 @@ export const getDOMNode = (selector: string) => {
 }
 
 export const css = (target: OikiaElement | undefined, key: any, value: any) => {
+    if(
+        key == "backgroundImage" ||
+        key == "maskImage"
+    ) {
+        let isURL = true;
+
+        try {
+            new URL(value);
+        } catch(e) {
+            isURL = false;
+        }
+
+        if(isURL) {
+            value = `url(${value})`
+        }
+    }
+
     target.style[kebabToCamel(key)] = value;
 }

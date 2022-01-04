@@ -1,4 +1,4 @@
-import { OikiaElement } from ".";
+import { css, OikiaElement } from ".";
 import { EVENT_HANDLER_SHOULD_BE_CALLABLE } from "./errors";
 import { camelToKebab, kebabToCamel } from "./utils/cc"
 import { setReference } from "./utils/internal";
@@ -26,7 +26,7 @@ export const attr = (target: OikiaElement, key: string, value: any) => {
 
     if(key == "style" && typeof value == "object") {
         for(const [key, val] of Object.entries(value)) {
-            target.style[kebabToCamel(key)] = val;
+            css(target, key, val);
         }
         
         return;
