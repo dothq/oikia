@@ -1,9 +1,7 @@
 export const camelToKebab = (str: string) => {
-    return str.split("").map((letter, i) => {
-        return letter.toUpperCase() === letter
-            ? `${i !== 0 ? "-" : ""}${letter.toLowerCase()}`
-            : letter;
-    }).join("").replace(/_/g, "");
+    return str
+        .replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2")
+        .toLowerCase();
 }
 
 export const kebabToCamel = (str: string) => {
