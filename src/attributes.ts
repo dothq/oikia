@@ -1,6 +1,6 @@
 import { css, OikiaElement } from ".";
 import { EVENT_HANDLER_SHOULD_BE_CALLABLE } from "./errors";
-import { camelToKebab, kebabToCamel } from "./utils/cc"
+import { camelToKebab } from "./utils/cc"
 import { setReference } from "./utils/internal";
 
 export const attr = (target: OikiaElement, key: string, value: any) => {
@@ -14,7 +14,11 @@ export const attr = (target: OikiaElement, key: string, value: any) => {
     if(key.startsWith("on")) {
         if(typeof value !== "function") return console.warn(EVENT_HANDLER_SHOULD_BE_CALLABLE(target, key));
 
-        const htmlEvent = key.split("on")[1].toLowerCase();
+        let htmlEvent = key.split("on")[1].toLowerCase();
+
+        if(target.tagName == "INPUT" && htmlEvent == "change") {
+            htmlEvent = "input";
+        }
 
         return target.addEventListener(
             htmlEvent, 

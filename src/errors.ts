@@ -15,3 +15,6 @@ export const INNER_HTML_ALLOWED_WARNING = () =>
 
 export const EVENT_HANDLER_SHOULD_BE_CALLABLE = (target: HTMLElement, event: string) =>
     `Oikia: The '${event.toLowerCase()}' handler on ${target} is a string. Expected a function.`
+
+export const MISSING_RENDER_METHOD = (name: string) =>
+    `Oikia: Cannot render '${name}' component as the render() method is not present.`
