@@ -22,7 +22,9 @@ export const render = (
         }
 
         element.replaceWith(component);
+
+        return element;
     } else {
-        element.appendChild(component);
+        return element.appendChild(component);
     }
 }
